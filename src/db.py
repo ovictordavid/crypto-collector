@@ -1,5 +1,11 @@
+"""
+Conexão e operações de banco SQLite via SQLAlchemy: cria engine, sessão,
+faz upsert na tabela dimensão Cryptocurrency e insere retratos na tabela fato em MarketData.
+
+"""
+
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from src.models import Base, Cryptocurrency, MarketData
@@ -25,6 +31,6 @@ def insert_market_data(session, crypto_obj, metrics):
         price_usd=float(metrics["priceUsd"]),
         market_cap_usd=float(metrics["marketCapUsd"]),
         volume_usd_24h=float(metrics["volumeUsd24Hr"]),
-        timestamp=datetime.utcnow()
+        timestamp=datetime.now(timezone.utc)
     )
     session.add(md)

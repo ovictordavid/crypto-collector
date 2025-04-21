@@ -1,3 +1,8 @@
+"""
+Definição dos atributos a serem utilizados no banco de dados
+
+"""
+
 from sqlalchemy import (
     Column, String, Float, Integer, DateTime, ForeignKey
 )
