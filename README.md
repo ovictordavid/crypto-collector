@@ -33,7 +33,7 @@ pip install -r requirements.txt
 ## Configuração
 1. Defina as variáveis para configuração da API e suas limitações, e do banco de dados e volume de ativos coletados em um arquivo `.env` na origem do projeto.
 2. Após definir, cole no arquivo `.env` criado:
-   ```
+```
 # Caminho do banco SQLite
 DB_PATH=./crypto.db
 
@@ -46,7 +46,7 @@ API_BASE=https://api.coingecko.com/api/v3
 # Limites de retry: quantas tentativas e quantos segundos de espera no uso da API
 MAX_ATTEMPTS=5
 WAIT_SECONDS=2
-   ```
+```
 
 ## Execução
 ```bash
