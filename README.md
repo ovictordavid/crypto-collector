@@ -67,6 +67,7 @@ O script criará (ou atualizará conforme hora atual) as tabelas `cryptocurrency
 - Uma camada persistente (db.py)
 - Um domínio para definir entidades do banco de dados
 - Infraestrutura, onde variáveis e configurações são definidas (config.py e .env)
+- Repositório para testes unitários. Verifica a integridade e consistência dos dados e do código (test_db.py)
 
 ```
 crypto-collector/
